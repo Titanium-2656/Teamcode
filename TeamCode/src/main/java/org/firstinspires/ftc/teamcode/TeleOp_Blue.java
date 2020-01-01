@@ -10,9 +10,9 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
 
-@TeleOp(name="TeleOp Test", group="2656 Test")
+@TeleOp(name="Blue TeleOp", group="")
 //@Disabled
-public class TeleOp_Test extends LinearOpMode {
+public class TeleOp_Blue extends LinearOpMode {
 
     //创建所有马达变量
     private ElapsedTime runtime = new ElapsedTime();
@@ -51,8 +51,6 @@ public class TeleOp_Test extends LinearOpMode {
 
     @Override
     public void runOpMode() {
-
-        //使用HardwareMap方法初始化电机变量
 
         //底盘电机
         FrontLeftDrive  = hardwareMap.get(DcMotor.class, "FrontLeftDrive");
@@ -107,15 +105,14 @@ public class TeleOp_Test extends LinearOpMode {
         while (opModeIsActive()) {
 
 
-            //--------New Code-------------
 
             //Scaling the joystick inputs for sensitivity
-            float y_raw = gamepad1.left_stick_y * 0.9f;
-            float x_raw = gamepad1.left_stick_x * 0.9f;
-            float z_raw = gamepad1.right_stick_x * 0.9f;
-            float xscale = (float) 0.75;
-            float yscale = (float) 0.75;
-            float zscale = (float) 0.65;
+            float y_raw = gamepad1.left_stick_y * 0.85f;
+            float x_raw = gamepad1.left_stick_x * 0.85f;
+            float z_raw = gamepad1.right_stick_x * 0.7f;
+            float xscale = (float) 0.85;
+            float yscale = (float) 0.85;
+            float zscale = (float) 0.75;
             float x = -(xscale * (float) Math.pow(x_raw, 7.0) + (1- xscale) * x_raw);
             float y = yscale * (float) Math.pow(y_raw, 7.0) + (1 - yscale) * y_raw;
             float z = -(zscale * (float) Math.pow(z_raw, 7.0) + (1 - zscale) * z_raw);
@@ -194,7 +191,7 @@ public class TeleOp_Test extends LinearOpMode {
             //前后吸取代码
             intake();
 
-           grab();
+            grab();
 
 
 
