@@ -247,7 +247,7 @@
     <string name="about_build_time">App Build Time</string>
     <string name="about_ch_os_version">Control Hub OS Version</string>
     <string name="about_library_version">Library Version</string>
-    <string name="about_menu_item">About</string>
+    <string name="about_menu_item">关于</string>
     <string name="about_network_connection_info">Network Connection Info</string>
     <string name="about_network_protocol_version">Robot Wifi Protocol Version</string>
     <string name="about_wifi_connected">Connected</string>
@@ -283,7 +283,7 @@
     <string name="appNameUnknown">Unknown Application</string>
     <string name="appThemeChangeRestartNotifyDS">App color scheme has changed. The driver station will restart.</string>
     <string name="appThemeChangeRestartNotifyRC">App color scheme has changed. The robot controller will restart.</string>
-    <string name="app_name">FTC Robot Controller</string>
+    <string name="app_name">FTC Robot Controll</string>
     <string name="app_result_type_attempting_installation">The APK file was successfully loaded.\nNow attempting installation of the %s.</string>
     <string name="app_result_type_auto_updated_app">Auto-updated app: %s</string>
     <string name="app_result_type_failed_and_reverted">The APK failed to install, and the backed up APK failed to restore. Reverted to the version that came with the Control Hub.</string>
@@ -408,7 +408,7 @@
     <string name="configureFromTemplate">Configure from Template</string>
     <string name="configure_activity">Configure Robot</string>
     <string name="configure_menu_item">Configure Robot</string>
-    <string name="configure_robot_menu_item">Configure Robot</string>
+    <string name="configure_robot_menu_item">配置机器人</string>
     <string name="configure_settings">Change Channel</string>
     <string name="confirmConfigDeleteMessage">Are you sure you want to delete this configuration?</string>
     <string name="confirmConfigDeleteTitle">Confirm Configuration Delete</string>
@@ -459,14 +459,14 @@
     <string name="edit_swap_devices_activity">Swap USB Devices</string>
     <string name="edit_webcam_activity">Edit Camera</string>
     <string name="errorConfigurationNotFound">"Configuration not found: %s"</string>
-    <string name="errorExpansionHubIsMissing">Expansion Hub \"%s\" is missing</string>
+    <string name="errorExpansionHubIsMissing">Expansion Hub \"%s\" was missing at startup. Robot Restart required for hub operation</string>
     <string name="errorFailedToOpenDeviceManager">Failed to open the Device Manager</string>
     <string name="errorOpModeStuck">OpMode \'%1$s\' stuck in %2$s. Restarting robot controller app.</string>
     <string name="errorParsingConfiguration">"Error parsing configuration: %s"</string>
     <string name="errorScanningDevicesTitle">Error Scanning for Devices</string>
     <string name="error_text_error">Error: %s</string>
     <string name="error_text_warning">Warning: %s</string>
-    <string name="exit_menu_item">Exit</string>
+    <string name="exit_menu_item">退出</string>
     <string name="expansionHubFirmwareUpdateMessage">Updating Expansion Hub %1$s firmware with \"%2$s\". Please do not unplug.</string>
     <string name="file_activate_button">Activate</string>
     <string name="file_delete_button">Delete</string>
@@ -500,13 +500,16 @@
     for Wifi Direct peers.  Pressing Ok will redirect you to the Location Services setting page where this may be enabled.</string>
     <string name="log_label">Server log:</string>
     <string name="lynxAnalogInputControllerDisplayName">Expansion Hub Analog Input Controller</string>
-    <string name="lynxBatteryToLowMotor">The expansion hub reported that the battery is too low to run motors.  Please check the battery connection and/or replace with a charged battery.</string>
-    <string name="lynxBatteryToLowServo">The expansion hub reported that the battery is too low to run servos.  Please check the battery connection and/or replace with a charged battery.</string>
     <string name="lynxDcMotorControllerDisplayName">Expansion Hub DC Motor Controller</string>
     <string name="lynxDigitalChannelControllerDisplayName">Expansion Hub Digital Channel Controller</string>
     <string name="lynxFirmwareUpdateReadme">Place any downloaded Expansion Hub firmware updates you wish to install in this folder. You can then install those updates using the Advanced Settings menu on the Driver Station or Robot Controller.</string>
     <string name="lynxI2cDeviceSynchDisplayName">Expansion Hub I2C Device</string>
+    <string name="lynxModuleBatteryIsCurrentlyLow">reported that the battery is currently too low to run motors and servos.</string>
+    <string name="lynxModuleBatteryWasLow">temporarily reported that the battery was too low to run motors and servos while an Op Mode was running.</string>
+    <string name="lynxModuleCurrentlyNotResponding">not currently responding to commands</string>
     <string name="lynxModuleDisplayName">Expansion Hub</string>
+    <string name="lynxModulePowerLost">reported a temporary complete power loss while an Op Mode was running. Unexpected behavior may result.</string>
+    <string name="lynxModulePreviouslyNotResponding">temporarily stopped responding to commands while an Op Mode was running</string>
     <string name="lynxPwmOutputControllerDisplayName">Expansion Hub Pwm Controller</string>
     <string name="lynxServoControllerDisplayName">Expansion Hub Servo Controller</string>
     <string name="lynxUnavailableFWVersionString">firmware version unavailable</string>
@@ -611,8 +614,8 @@
     <string name="passphrase_label">Use the following passphrase to gain access to the network:</string>
     <string name="peerStatusConnected">connected</string>
     <string name="peerStatusDisconnected">disconnected</string>
-    <string name="permAccessCoarseLocationExplain">The SDK infrastructure does WiFi scans to help with pairing of
-    phones.  Knowing what access points are available can allow an application to know a coarse approximation of its
+    <string name="permAccessLocationExplain">The SDK infrastructure does WiFi scans to help with pairing of
+    phones.  Knowing what access points are available can allow an application to know an approximation of its
     location.  Even though the SDK does not use location information, Android requires that we ask for this permission.
     It is not possible to run the application without this permission.  You must allow all permissions.</string>
     <string name="permDsReadExternalStorageExplain">The Driver Station must be able to access external storage
@@ -634,7 +637,12 @@
     <string name="permRcWriteExternalStorageExplain">The Robot Controller must be able to access external storage
     for the Blocks and OnBot Java developement environments and robot logging.  It is not possible to run the
     application without this permission.  You must allow all permissions.</string>
+    <string name="permReadPhoneState">The SDK uses this to access the device serial number.  This may be used
+    for diagnostic purposes.  FIRST does not store the serial number off device or use it in any other fashion.
+    Android requires that we ask for this permission.
+    It is not possible to run the application without this permission.  You must allow all permissions.</string>
     <string name="port">Port</string>
+    <string name="powerIssueTip">Check your wiring, battery, and power switch</string>
     <string name="pref_app_category">pref_app_category</string>
     <string name="pref_app_category_rc">pref_app_category_rc</string>
     <string name="pref_app_theme">pref_app_theme</string>
@@ -748,7 +756,7 @@
     <string name="readOnlyExplanation">Read-only configurations can be edited, but must be saved under a new name.</string>
     <string name="readXML_text">Select an XML file to instantiate a Robot from that file</string>
     <string name="rescanButton_text">Press the \'Scan\' button to rescan for attached devices</string>
-    <string name="restart_robot_menu_item">Restart Robot</string>
+    <string name="restart_robot_menu_item">重启机器人</string>
     <string name="restore_settings">Restore Saved WiFi Settings</string>
     <string name="rev_20_hd_hex_name">REV Robotics 20:1 HD Hex Motor</string>
     <string name="rev_40_hd_hex_name">REV Robotics 40:1 HD Hex Motor</string>
@@ -764,6 +772,7 @@
     <string name="rev_spark_mini_name">REV SPARKmini Controller</string>
     <string name="rev_touch_sensor_description">a REV touch sensor</string>
     <string name="robotControllerAppUpdateReadme">When running on a REV Control Hub (and only on a Control Hub, not merely a robot controller phone), any Android applications (APK files) found in this folder will be automatically installed when the system boots. Once successfully installed, each APK is deleted so as to not be reinstalled on subsequent boots.</string>
+    <string name="robotOffTip">Make sure that your robot is turned on</string>
     <string name="robotStateEmergencyStop">EMERGENCY STOP</string>
     <string name="robotStateInit">initializing</string>
     <string name="robotStateInternalError">internal error</string>
@@ -805,7 +814,7 @@
     <string name="setWifiChannelFailure">Unable to change Wifi Direct channel to \'%s\'</string>
     <string name="setWifiChannelSuccess">Changed Wifi Direct channel to \'%s\'</string>
     <string name="settings_activity">Settings</string>
-    <string name="settings_menu_item">Settings</string>
+    <string name="settings_menu_item">设置</string>
     <string name="standard_servo_description">a servo</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="stringManufacturer">Manufacturer:</string>
@@ -856,13 +865,13 @@
     <string name="toastOpModeStuck">OpMode stuck in %s. Restarting robot controller app.</string>
     <string name="toastRebootRC">Rebooting Robot Controller</string>
     <string name="toastRestartRobotComplete">Restart Robot Complete</string>
-    <string name="toastRestartingRobot">Restarting Robot</string>
+    <string name="toastRestartingRobot">重新启动机器人中...</string>
     <string name="toastRobotSetupComplete">Robot Setup Complete</string>
     <string name="toastSaved">Saved</string>
     <string name="toastUnableToLaunchZTEWifiChannelEditor">Unable to launch ZTE WifiChannelEditor</string>
     <string name="toastWebViewDownloadFile">Downloading %1$s</string>
     <string name="toastWebViewDownloadsComplete">Downloads Complete</string>
-    <string name="toastWifiConfigurationComplete">Configuration Complete</string>
+    <string name="toastWifiConfigurationComplete">配置成功！</string>
     <string name="toastWifiP2pChannelChangeRequestedDS">Asked Robot Controller to change to channel \'%s\'. A restart of the Driver Station may be needed.</string>
     <string name="toastWifiP2pRememberedGroupsCleared">Wifi Direct remembered groups have been cleared from the robot controller.</string>
     <string name="toastWifiUpBeforeProgrammingMode">The Robot Controller must be fully up and running before entering Program and Manage Mode.</string>
@@ -889,6 +898,7 @@
     <string name="userSensorTypeBusDefault">port</string>
     <string name="view_logs_activity">View Logs</string>
     <string name="warningProblemCommunicatingWithUSBDevice">problem communicating with %s</string>
+    <string name="warningTtsFailedToInitialize">Text-to-speech failed to initialize</string>
     <string name="warningUSBDeviceDetached">%s detached</string>
     <string name="warningUnableToOpen">unable to open %s</string>
     <string name="webViewDownloadRequestDescription">Download file...</string>
