@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\OneDrive - geshkii\\FTC\\SkyStone-5.4\\TeamCode\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
+            "outputFile": "C:\\Users\\carl\\OneDrive - geshkii\\FTC\\SkyStone-5.4\\TeamCode\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Carl\\.gradle\\caches\\transforms-2\\files-2.1\\ccbd3881d3e597a650ace942161206f5\\support-compat-28.0.0\\res\\values-ca\\values-ca.xml",
+                    "source": "C:\\Users\\carl\\.gradle\\caches\\transforms-2\\files-2.1\\ccbd3881d3e597a650ace942161206f5\\support-compat-28.0.0\\res\\values-ca\\values-ca.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

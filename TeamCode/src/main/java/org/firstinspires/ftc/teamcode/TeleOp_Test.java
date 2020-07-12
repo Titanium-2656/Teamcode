@@ -73,8 +73,8 @@ public class TeleOp_Test extends LinearOpMode {
         leftRise.setPower(0);
         rightRise.setPower(0);
 
-        leftStake.setPosition(0);
-        //rightStake.setPosition(0);
+        leftStake.setPosition(0.3);
+        rightStake.setPosition(0.3);
 
         //向控制台输出数据：车辆以初始化完毕
         telemetry.addData("状态", "初始化完毕");
@@ -106,8 +106,8 @@ public class TeleOp_Test extends LinearOpMode {
              isPosition1 = false;
             }
             else{
-                leftStake.setPosition(1);
-                rightStake.setPosition(1);
+                leftStake.setPosition(0.3);
+                rightStake.setPosition(0.3);
                 isPosition1 = true;
             }
         }
