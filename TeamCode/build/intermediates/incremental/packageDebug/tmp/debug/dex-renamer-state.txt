@@ -1,4 +1,4 @@
-#Sun Jul 12 15:48:55 CST 2020
-base.0=C\:\\Users\\carl\\OneDrive - geshkii\\FTC\\SkyStone-5.4\\TeamCode\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Sun Jul 19 15:55:47 CST 2020
+base.0=C\:\\Users\\carl\\Documents\\GitHub\\Teamcode\\TeamCode\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

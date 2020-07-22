@@ -30,7 +30,16 @@ public class TeleOp_Test extends LinearOpMode {
     private Servo leftStake = null;
     private Servo rightStake = null;
 
+    private Servo frontRoot = null;
+    private Servo rearRoot = null;
+
+    private Servo frontGrab = null;
+
     private boolean isPosition1 = false;
+    private boolean isRoot1 = false;
+
+    //Test unit variable
+    private boolean isGrab1 = false;
 
     @Override
     public void runOpMode() {
@@ -48,6 +57,12 @@ public class TeleOp_Test extends LinearOpMode {
 
         leftStake = hardwareMap.get(Servo.class, "leftStake");
         rightStake = hardwareMap.get(Servo.class, "rightStake");
+
+        frontRoot = hardwareMap.get(Servo.class, "FrontRoot");
+        rearRoot = hardwareMap.get(Servo.class, "BackRoot");
+
+        frontGrab = hardwareMap.get(Servo.class, "FrontGrab");
+
 
         //设定电机由编码器管理
         FrontLeftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -76,6 +91,11 @@ public class TeleOp_Test extends LinearOpMode {
         leftStake.setPosition(0.3);
         rightStake.setPosition(0.3);
 
+        frontRoot.setPosition(0);
+        rearRoot.setPosition(0);
+
+        frontGrab.setPosition(0);
+
         //向控制台输出数据：车辆以初始化完毕
         telemetry.addData("状态", "初始化完毕");
         telemetry.update();
@@ -91,10 +111,44 @@ public class TeleOp_Test extends LinearOpMode {
             intake();
             rise();
             activateStake();
+            activateRoot();
 
             // Show the elapsed game time and wheel power.
             telemetry.addData("状态", "运行时间: " + runtime.toString());
             telemetry.update();
+        }
+    }
+
+    //Test unit function
+    /*
+        Unit function not stable.
+        0 position of the grab servo is not good.
+     */
+    public void testFrontGrab(){
+        if(gamepad1.left_trigger == 1){
+         if(isGrab1){
+             frontGrab.setPosition(0);
+             isGrab1 = false;
+         }
+         else{
+             frontGrab.setPosition(0.5);
+             isGrab1 = true;
+         }
+        }
+    }
+
+    public void activateRoot(){
+        if(gamepad1.dpad_right){
+            if(isRoot1){
+                //frontRoot.setPosition(0);
+                rearRoot.setPosition(0);
+                isRoot1 = false;
+            }
+            else{
+                //frontRoot.setPosition(0.5);
+                rearRoot.setPosition(-1);
+                isRoot1 = true;
+            }
         }
     }
 
@@ -123,8 +177,8 @@ public class TeleOp_Test extends LinearOpMode {
         }
 
         if(gamepad1.dpad_down){
-            leftRise.setPower(-1);
-            rightRise.setPower(-1);
+            leftRise.setPower(-0.4);
+            rightRise.setPower(-0.4);
         }
         else{
             leftRise.setPower(0);
@@ -153,9 +207,9 @@ public class TeleOp_Test extends LinearOpMode {
         //--------New Code-------------
 
         //Scaling the joystick inputs for sensitivity
-        float y_raw = gamepad1.left_stick_y * 0.9f;
-        float x_raw = gamepad1.left_stick_x * 0.9f;
-        float z_raw = gamepad1.right_stick_x * 0.9f;
+        float y_raw = gamepad1.left_stick_y * 0.8f;
+        float x_raw = gamepad1.left_stick_x * 0.8f;
+        float z_raw = gamepad1.right_stick_x * 0.8f;
         float xscale = (float) 0.75;
         float yscale = (float) 0.75;
         float zscale = (float) 0.65;

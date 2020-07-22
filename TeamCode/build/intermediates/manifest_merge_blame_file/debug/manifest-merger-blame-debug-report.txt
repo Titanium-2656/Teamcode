@@ -12,13 +12,13 @@
 12
 13    <uses-sdk
 14        android:minSdkVersion="19"
-14-->C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\TeamCode\src\main\AndroidManifest.xml
+14-->C:\Users\carl\Documents\GitHub\Teamcode\TeamCode\src\main\AndroidManifest.xml
 15        android:targetSdkVersion="28" />
-15-->C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\TeamCode\src\main\AndroidManifest.xml
+15-->C:\Users\carl\Documents\GitHub\Teamcode\TeamCode\src\main\AndroidManifest.xml
 16
 17    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-17-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-81
-17-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:22-78
+17-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-81
+17-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:22-78
 18    <uses-permission
 18-->[:RobotCore-release:] C:\Users\carl\.gradle\caches\transforms-2\files-2.1\36c0e6c528b86971785b095783b48b50\RobotCore-release\AndroidManifest.xml:11:5-13:35
 19        android:name="android.permission.ACCESS_WIFI_STATE"
@@ -142,92 +142,92 @@
 84-->[:Inspection-release:] C:\Users\carl\.gradle\caches\transforms-2\files-2.1\7f42dccff689e4f4c2cad349aa3171eb\Inspection-release\AndroidManifest.xml:12:22-71
 85
 86    <application
-86-->C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\TeamCode\src\main\AndroidManifest.xml:11:5-19
+86-->C:\Users\carl\Documents\GitHub\Teamcode\TeamCode\src\main\AndroidManifest.xml:11:5-19
 87        android:name="org.firstinspires.ftc.robotcore.internal.system.RobotApplication"
 87-->[:RobotCore-release:] C:\Users\carl\.gradle\caches\transforms-2\files-2.1\36c0e6c528b86971785b095783b48b50\RobotCore-release\AndroidManifest.xml:86:18-97
 88        android:allowBackup="true"
-88-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:9-35
+88-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:9-35
 89        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
 89-->[com.android.support:support-compat:28.0.0] C:\Users\carl\.gradle\caches\transforms-2\files-2.1\ccbd3881d3e597a650ace942161206f5\support-compat-28.0.0\AndroidManifest.xml:22:18-91
 90        android:debuggable="true"
 91        android:icon="@drawable/ic_launcher"
-91-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-45
+91-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-45
 92        android:label="@string/app_name"
-92-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:9-41
+92-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:9-41
 93        android:largeHeap="true"
-93-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-33
+93-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-33
 94        android:testOnly="true"
 95        android:theme="@style/AppThemeRedRC" > <!-- Indicates to the ControlHubUpdater what the latest version of the Control Hub is that this app supports -->
-95-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:9-45
+95-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:9-45
 96        <meta-data
-96-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:9-24:33
+96-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:9-24:33
 97            android:name="org.firstinspires.latestSupportedControlHubVersion"
-97-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-78
+97-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-78
 98            android:value="1" /> <!-- The main robot controller activity -->
-98-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-30
+98-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-30
 99        <activity
-99-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:9-38:20
+99-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:9-38:20
 100            android:name="org.firstinspires.ftc.robotcontroller.internal.PermissionValidatorWrapper"
-100-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-101
+100-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-101
 101            android:configChanges="orientation|screenSize"
-101-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-59
+101-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-59
 102            android:label="@string/app_name"
-102-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-45
+102-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-45
 103            android:launchMode="singleTask"
-103-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-44
+103-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-44
 104            android:screenOrientation="fullUser" >
-104-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:13-49
+104-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:13-49
 105            <intent-filter>
-105-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:13-37:29
+105-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:13-37:29
 106                <category android:name="android.intent.category.LAUNCHER" />
-106-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:17-77
-106-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:27-74
+106-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:17-77
+106-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:27-74
 107
 108                <action android:name="android.intent.action.MAIN" />
-108-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:17-69
-108-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:25-66
+108-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:17-69
+108-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:25-66
 109            </intent-filter>
 110        </activity>
 111        <activity
-111-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:9-57:20
+111-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:9-57:20
 112            android:name="org.firstinspires.ftc.robotcontroller.internal.FtcRobotControllerActivity"
-112-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-101
+112-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-101
 113            android:configChanges="orientation|screenSize"
-113-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-59
+113-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-59
 114            android:label="@string/app_name"
-114-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-45
+114-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-45
 115            android:launchMode="singleTask"
-115-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-44
+115-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-44
 116            android:screenOrientation="fullUser" >
-116-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:44:13-49
+116-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:44:13-49
 117            <intent-filter>
-117-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:13-47:29
+117-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:13-47:29
 118                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
-118-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:17-90
-118-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:25-87
+118-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:17-90
+118-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:25-87
 119            </intent-filter>
 120
 121            <meta-data
-121-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:49:13-51:57
+121-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:49:13-51:57
 122                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
-122-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:50:17-79
+122-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:50:17-79
 123                android:resource="@xml/device_filter" />
-123-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:51:17-54
+123-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:51:17-54
 124
 125            <!-- org.firstinspires.main.entry indicates that this app is compatible with the Dragonboard Control Hub -->
 126            <meta-data
-126-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:54:13-56:40
+126-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:54:13-56:40
 127                android:name="org.firstinspires.main.entry"
-127-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:55:17-60
+127-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:55:17-60
 128                android:value="true" />
-128-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:56:17-37
+128-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:56:17-37
 129        </activity> <!-- The robot controller service in which most of the robot functionality is managed -->
 130        <service
-130-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:60:9-62:38
+130-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:60:9-62:38
 131            android:name="com.qualcomm.ftccommon.FtcRobotControllerService"
-131-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:13-76
+131-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:13-76
 132            android:enabled="true" /> <!-- Service that keeps desktop folders up to date with respect to actual phone file system contents -->
-132-->[:FtcRobotController] C:\Users\carl\OneDrive - geshkii\FTC\SkyStone-5.4\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:62:13-35
+132-->[:FtcRobotController] C:\Users\carl\Documents\GitHub\Teamcode\FtcRobotController\build\intermediates\library_manifest\debug\AndroidManifest.xml:62:13-35
 133        <service
 133-->[:RobotCore-release:] C:\Users\carl\.gradle\caches\transforms-2\files-2.1\36c0e6c528b86971785b095783b48b50\RobotCore-release\AndroidManifest.xml:89:9-91:38
 134            android:name="org.firstinspires.ftc.robotcore.internal.files.MediaTransferProtocolMonitorService"
