@@ -30,16 +30,18 @@ public class TeleOp_Test extends LinearOpMode {
     private Servo leftStake = null;
     private Servo rightStake = null;
 
-    private Servo frontRoot = null;
-    private Servo rearRoot = null;
-
-    private Servo frontGrab = null;
-
     private boolean isPosition1 = false;
-    private boolean isRoot1 = false;
+    private  boolean isRoot1 = false;
+
 
     //Test unit variable
-    private boolean isGrab1 = false;
+    private Servo frontRoot = null;
+    private Servo backRoot  = null;
+
+    private Servo frontGrab = null;
+    private Servo backGrab = null;
+
+
 
     @Override
     public void runOpMode() {
@@ -58,11 +60,12 @@ public class TeleOp_Test extends LinearOpMode {
         leftStake = hardwareMap.get(Servo.class, "leftStake");
         rightStake = hardwareMap.get(Servo.class, "rightStake");
 
+
+        //Test unit variable
         frontRoot = hardwareMap.get(Servo.class, "FrontRoot");
-        rearRoot = hardwareMap.get(Servo.class, "BackRoot");
+        backRoot = hardwareMap.get(Servo.class, "BackRoot");
 
         frontGrab = hardwareMap.get(Servo.class, "FrontGrab");
-
 
         //设定电机由编码器管理
         FrontLeftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -82,6 +85,10 @@ public class TeleOp_Test extends LinearOpMode {
         leftRise.setDirection(DcMotor.Direction.FORWARD);
         rightRise.setDirection(DcMotor.Direction.FORWARD);
 
+        //Set test variable turn direction
+        backRoot.setDirection(Servo.Direction.REVERSE);
+        frontGrab.setDirection(Servo.Direction.REVERSE);
+
         leftIntake.setPower(0);
         rightIntake.setPower(0);
 
@@ -91,8 +98,9 @@ public class TeleOp_Test extends LinearOpMode {
         leftStake.setPosition(0.3);
         rightStake.setPosition(0.3);
 
-        frontRoot.setPosition(0);
-        rearRoot.setPosition(0);
+        //Set test variable position.
+        //frontRoot.setPosition(0);
+        //backRoot.setPosition(0);
 
         frontGrab.setPosition(0);
 
@@ -119,34 +127,17 @@ public class TeleOp_Test extends LinearOpMode {
         }
     }
 
-    //Test unit function
-    /*
-        Unit function not stable.
-        0 position of the grab servo is not good.
-     */
-    public void testFrontGrab(){
-        if(gamepad1.left_trigger == 1){
-         if(isGrab1){
-             frontGrab.setPosition(0);
-             isGrab1 = false;
-         }
-         else{
-             frontGrab.setPosition(0.5);
-             isGrab1 = true;
-         }
-        }
-    }
-
     public void activateRoot(){
         if(gamepad1.dpad_right){
             if(isRoot1){
-                //frontRoot.setPosition(0);
-                rearRoot.setPosition(0);
+                backRoot.setPosition(0);
+                frontRoot.setPosition(0);
                 isRoot1 = false;
             }
             else{
-                //frontRoot.setPosition(0.5);
-                rearRoot.setPosition(-1);
+                frontRoot.setPosition(0.5);
+                backRoot.setPosition(0.4);
+                frontGrab.setPosition(-0.1);
                 isRoot1 = true;
             }
         }
@@ -168,8 +159,8 @@ public class TeleOp_Test extends LinearOpMode {
     }
     public void rise(){
         if(gamepad1.dpad_up){
-            leftRise.setPower(1);
-            rightRise.setPower(1);
+            leftRise.setPower(0.8);
+            rightRise.setPower(0.8);
         }
         else{
             leftRise.setPower(0);
