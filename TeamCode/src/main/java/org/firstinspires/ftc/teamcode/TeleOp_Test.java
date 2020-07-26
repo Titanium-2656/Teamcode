@@ -10,7 +10,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
 
-@TeleOp(name="TeleOp Test", group="2656 Test")
+@TeleOp(name="手动程序", group="2656 Test")
 //@Disabled
 public class TeleOp_Test extends LinearOpMode {
 
@@ -32,14 +32,15 @@ public class TeleOp_Test extends LinearOpMode {
 
     private boolean isPosition1 = false;
     private  boolean isRoot1 = false;
+    private boolean  isGrab1 = false;
 
 
     //Test unit variable
     private Servo frontRoot = null;
     private Servo backRoot  = null;
 
-    private Servo frontGrab = null;
-    private Servo backGrab = null;
+    //A button test variable
+    private String button = null;
 
 
 
@@ -65,8 +66,6 @@ public class TeleOp_Test extends LinearOpMode {
         frontRoot = hardwareMap.get(Servo.class, "FrontRoot");
         backRoot = hardwareMap.get(Servo.class, "BackRoot");
 
-        frontGrab = hardwareMap.get(Servo.class, "FrontGrab");
-
         //设定电机由编码器管理
         FrontLeftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         FrontRightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -87,7 +86,6 @@ public class TeleOp_Test extends LinearOpMode {
 
         //Set test variable turn direction
         backRoot.setDirection(Servo.Direction.REVERSE);
-        frontGrab.setDirection(Servo.Direction.REVERSE);
 
         leftIntake.setPower(0);
         rightIntake.setPower(0);
@@ -99,10 +97,8 @@ public class TeleOp_Test extends LinearOpMode {
         rightStake.setPosition(0.3);
 
         //Set test variable position.
-        //frontRoot.setPosition(0);
-        //backRoot.setPosition(0);
-
-        frontGrab.setPosition(0);
+        frontRoot.setPosition(0);
+        backRoot.setPosition(0);
 
         //向控制台输出数据：车辆以初始化完毕
         telemetry.addData("状态", "初始化完毕");
@@ -122,10 +118,13 @@ public class TeleOp_Test extends LinearOpMode {
             activateRoot();
 
             // Show the elapsed game time and wheel power.
+            telemetry.addData("按钮测试：", button);
             telemetry.addData("状态", "运行时间: " + runtime.toString());
             telemetry.update();
         }
     }
+
+    //Grab test unit function
 
     public void activateRoot(){
         if(gamepad1.dpad_right){
@@ -136,13 +135,11 @@ public class TeleOp_Test extends LinearOpMode {
             }
             else{
                 frontRoot.setPosition(0.5);
-                backRoot.setPosition(0.4);
-                frontGrab.setPosition(-0.1);
+                backRoot.setPosition(0.5);
                 isRoot1 = true;
             }
         }
     }
-
     public void activateStake(){
         if(gamepad1.dpad_left){
             if(isPosition1){
@@ -181,10 +178,6 @@ public class TeleOp_Test extends LinearOpMode {
         if(gamepad1.left_bumper == true){
             leftIntake.setPower(-1);
             rightIntake.setPower(-1);
-        }
-        else {
-            leftIntake.setPower(0);
-            rightIntake.setPower(0);
         }
 
         if(gamepad1.right_bumper){
