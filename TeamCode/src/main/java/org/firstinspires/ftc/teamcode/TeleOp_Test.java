@@ -42,6 +42,9 @@ public class TeleOp_Test extends LinearOpMode {
     //A button test variable
     private String button = null;
 
+    //RGB test variable
+    private Servo rgb = null;
+
 
 
     @Override
@@ -65,6 +68,8 @@ public class TeleOp_Test extends LinearOpMode {
         //Test unit variable
         frontRoot = hardwareMap.get(Servo.class, "FrontRoot");
         backRoot = hardwareMap.get(Servo.class, "BackRoot");
+
+        rgb = hardwareMap.get(Servo.class, "rgb");
 
         //设定电机由编码器管理
         FrontLeftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -100,6 +105,8 @@ public class TeleOp_Test extends LinearOpMode {
         frontRoot.setPosition(0);
         backRoot.setPosition(0);
 
+        rgb.setPosition(0.3);
+
         //向控制台输出数据：车辆以初始化完毕
         telemetry.addData("状态", "初始化完毕");
         telemetry.update();
@@ -111,6 +118,7 @@ public class TeleOp_Test extends LinearOpMode {
         //机器人开始按照预设系统运动
         while (opModeIsActive()) {
 
+            rgb.setPosition(0.4);
             calculateDrivePower();
             intake();
             rise();
