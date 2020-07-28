@@ -10,8 +10,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
 
-@TeleOp(name="手动程序", group="2656 Test")
-//@Disabled
+@TeleOp(name="手动", group="2656 Test")
 public class TeleOp_Test extends LinearOpMode {
 
     //创建所有马达变量
@@ -24,7 +23,6 @@ public class TeleOp_Test extends LinearOpMode {
     private DcMotor leftIntake = null;
     private  DcMotor rightIntake = null;
 
-    private  DcMotor leftRise = null;
     private  DcMotor rightRise = null;
 
     private Servo leftStake = null;
@@ -58,7 +56,6 @@ public class TeleOp_Test extends LinearOpMode {
         leftIntake = hardwareMap.get(DcMotor.class, "leftIntake");
         rightIntake = hardwareMap.get(DcMotor.class, "rightIntake");
 
-        leftRise = hardwareMap.get(DcMotor.class, "leftRise");
         rightRise = hardwareMap.get(DcMotor.class, "rightRise");
 
         leftStake = hardwareMap.get(Servo.class, "leftStake");
@@ -80,14 +77,12 @@ public class TeleOp_Test extends LinearOpMode {
         leftIntake.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightIntake.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        leftRise.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightRise.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
         leftIntake.setDirection(DcMotor.Direction.FORWARD);
         rightIntake.setDirection(DcMotor.Direction.REVERSE);
 
-        leftRise.setDirection(DcMotor.Direction.FORWARD);
-        rightRise.setDirection(DcMotor.Direction.FORWARD);
+        rightRise.setDirection(DcMotor.Direction.REVERSE);
 
         //Set test variable turn direction
         backRoot.setDirection(Servo.Direction.REVERSE);
@@ -95,7 +90,6 @@ public class TeleOp_Test extends LinearOpMode {
         leftIntake.setPower(0);
         rightIntake.setPower(0);
 
-        leftRise.setPower(0);
         rightRise.setPower(0);
 
         leftStake.setPosition(0.3);
@@ -164,20 +158,16 @@ public class TeleOp_Test extends LinearOpMode {
     }
     public void rise(){
         if(gamepad1.dpad_up){
-            leftRise.setPower(0.8);
-            rightRise.setPower(0.8);
+            rightRise.setPower(1);
         }
         else{
-            leftRise.setPower(0);
             rightRise.setPower(0);
         }
 
         if(gamepad1.dpad_down){
-            leftRise.setPower(-0.4);
-            rightRise.setPower(-0.4);
+            rightRise.setPower(-1);
         }
         else{
-            leftRise.setPower(0);
             rightRise.setPower(0);
         }
     }
