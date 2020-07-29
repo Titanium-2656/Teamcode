@@ -38,18 +38,18 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <resources>
 
-  <string name="app_name">FTC Robot Controll</string>
+  <string name="app_name">FTC Robot Controller</string>
 
   <!-- Menu -->
   <string name="inspection_mode_menu_item">Self Inspect</string>
   <string name="program_and_manage_menu_item">Program &amp; Manage</string>
   <string name="blocks_menu_item">Blocks</string>
-    <string name="restart_robot_menu_item">重启机器人</string>
-  <string name="configure_robot_menu_item">配置机器人</string>
-  <string name="about_menu_item">关于</string>
+    <string name="restart_robot_menu_item">Restart robot</string>
+  <string name="configure_robot_menu_item">Configure robot</string>
+  <string name="about_menu_item">About</string>
 
     <!-- Toast messages -->
-    <string name="toastRestartingRobot">重新启动机器人中...</string>
+    <string name="toastRestartingRobot">Restarting robot...</string>
   <string name="toastWifiUpBeforeProgrammingMode">The Robot Controller must be fully up and running before entering Program and Manage Mode.</string>
 
   <!-- for interpreting pref_app_theme contents. may be override in merged resources -->
@@ -63,8 +63,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   </integer-array>
 
   <string name="packageName">@string/packageNameRobotController</string>
-    <string name="exit_menu_item">退出</string>
-    <string name="toastWifiConfigurationComplete">配置成功！</string>
-    <string name="settings_menu_item">设置</string>
+    <string name="exit_menu_item">Exit</string>
+    <string name="toastWifiConfigurationComplete">Configuration successful!</string>
+    <string name="settings_menu_item">Settings</string>
 
 </resources>

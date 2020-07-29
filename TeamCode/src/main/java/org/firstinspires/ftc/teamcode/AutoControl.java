@@ -85,7 +85,7 @@ public class AutoControl extends LinearOpMode  {
 
         waitForStart();
 
-        
+
 
     }
 }

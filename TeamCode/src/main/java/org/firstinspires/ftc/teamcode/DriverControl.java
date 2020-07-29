@@ -10,7 +10,6 @@ import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
-
 @TeleOp(name="Driver control")
 public class DriverControl extends LinearOpMode {
 
@@ -80,7 +79,6 @@ public class DriverControl extends LinearOpMode {
 
         rightRise.setDirection(DcMotor.Direction.REVERSE);
 
-        //Set test variable turn direction
         backRoot.setDirection(Servo.Direction.REVERSE);
 
         leftIntake.setPower(0);
@@ -96,7 +94,7 @@ public class DriverControl extends LinearOpMode {
         backRoot.setPosition(0);
 
         //向控制台输出数据：车辆以初始化完毕
-        telemetry.addData("状态", "初始化完毕");
+        telemetry.addData("Status", "Initialized");
         telemetry.update();
 
         //等待驾驶员按下Start按钮
@@ -113,7 +111,7 @@ public class DriverControl extends LinearOpMode {
 
             operateLCraneServo();
 
-            telemetry.addData("状态", "运行时间: " + runtime.toString());
+            telemetry.addData("Status", "Operation time: " + runtime.toString());
             telemetry.update();
         }
     }
