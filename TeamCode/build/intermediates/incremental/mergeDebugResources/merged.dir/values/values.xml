@@ -247,7 +247,7 @@
     <string name="about_build_time">App Build Time</string>
     <string name="about_ch_os_version">Control Hub OS Version</string>
     <string name="about_library_version">Library Version</string>
-    <string name="about_menu_item">关于</string>
+    <string name="about_menu_item">About</string>
     <string name="about_network_connection_info">Network Connection Info</string>
     <string name="about_network_protocol_version">Robot Wifi Protocol Version</string>
     <string name="about_wifi_connected">Connected</string>
@@ -283,7 +283,7 @@
     <string name="appNameUnknown">Unknown Application</string>
     <string name="appThemeChangeRestartNotifyDS">App color scheme has changed. The driver station will restart.</string>
     <string name="appThemeChangeRestartNotifyRC">App color scheme has changed. The robot controller will restart.</string>
-    <string name="app_name">FTC Robot Controll</string>
+    <string name="app_name">FTC Robot Controller</string>
     <string name="app_result_type_attempting_installation">The APK file was successfully loaded.\nNow attempting installation of the %s.</string>
     <string name="app_result_type_auto_updated_app">Auto-updated app: %s</string>
     <string name="app_result_type_failed_and_reverted">The APK failed to install, and the backed up APK failed to restore. Reverted to the version that came with the Control Hub.</string>
@@ -408,7 +408,7 @@
     <string name="configureFromTemplate">Configure from Template</string>
     <string name="configure_activity">Configure Robot</string>
     <string name="configure_menu_item">Configure Robot</string>
-    <string name="configure_robot_menu_item">配置机器人</string>
+    <string name="configure_robot_menu_item">Configure robot</string>
     <string name="configure_settings">Change Channel</string>
     <string name="confirmConfigDeleteMessage">Are you sure you want to delete this configuration?</string>
     <string name="confirmConfigDeleteTitle">Confirm Configuration Delete</string>
@@ -466,7 +466,7 @@
     <string name="errorScanningDevicesTitle">Error Scanning for Devices</string>
     <string name="error_text_error">Error: %s</string>
     <string name="error_text_warning">Warning: %s</string>
-    <string name="exit_menu_item">退出</string>
+    <string name="exit_menu_item">Exit</string>
     <string name="expansionHubFirmwareUpdateMessage">Updating Expansion Hub %1$s firmware with \"%2$s\". Please do not unplug.</string>
     <string name="file_activate_button">Activate</string>
     <string name="file_delete_button">Delete</string>
@@ -756,7 +756,7 @@
     <string name="readOnlyExplanation">Read-only configurations can be edited, but must be saved under a new name.</string>
     <string name="readXML_text">Select an XML file to instantiate a Robot from that file</string>
     <string name="rescanButton_text">Press the \'Scan\' button to rescan for attached devices</string>
-    <string name="restart_robot_menu_item">重启机器人</string>
+    <string name="restart_robot_menu_item">Restart robot</string>
     <string name="restore_settings">Restore Saved WiFi Settings</string>
     <string name="rev_20_hd_hex_name">REV Robotics 20:1 HD Hex Motor</string>
     <string name="rev_40_hd_hex_name">REV Robotics 40:1 HD Hex Motor</string>
@@ -814,7 +814,7 @@
     <string name="setWifiChannelFailure">Unable to change Wifi Direct channel to \'%s\'</string>
     <string name="setWifiChannelSuccess">Changed Wifi Direct channel to \'%s\'</string>
     <string name="settings_activity">Settings</string>
-    <string name="settings_menu_item">设置</string>
+    <string name="settings_menu_item">Settings</string>
     <string name="standard_servo_description">a servo</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="stringManufacturer">Manufacturer:</string>
@@ -865,13 +865,13 @@
     <string name="toastOpModeStuck">OpMode stuck in %s. Restarting robot controller app.</string>
     <string name="toastRebootRC">Rebooting Robot Controller</string>
     <string name="toastRestartRobotComplete">Restart Robot Complete</string>
-    <string name="toastRestartingRobot">重新启动机器人中...</string>
+    <string name="toastRestartingRobot">Restarting robot...</string>
     <string name="toastRobotSetupComplete">Robot Setup Complete</string>
     <string name="toastSaved">Saved</string>
     <string name="toastUnableToLaunchZTEWifiChannelEditor">Unable to launch ZTE WifiChannelEditor</string>
     <string name="toastWebViewDownloadFile">Downloading %1$s</string>
     <string name="toastWebViewDownloadsComplete">Downloads Complete</string>
-    <string name="toastWifiConfigurationComplete">配置成功！</string>
+    <string name="toastWifiConfigurationComplete">Configuration successful!</string>
     <string name="toastWifiP2pChannelChangeRequestedDS">Asked Robot Controller to change to channel \'%s\'. A restart of the Driver Station may be needed.</string>
     <string name="toastWifiP2pRememberedGroupsCleared">Wifi Direct remembered groups have been cleared from the robot controller.</string>
     <string name="toastWifiUpBeforeProgrammingMode">The Robot Controller must be fully up and running before entering Program and Manage Mode.</string>
@@ -916,11 +916,10 @@
     <string name="writeXML_prompt">Select an XML file to instantiate a Robot from that file</string>
     <string name="writeXML_text">Press this button to write the current configuration to an XML file</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!-- Theme customizations available in newer API levels can go in res/values-vXX/styles.xml,
-        while customizations related to backward-compatibility can go here. -->
+        
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:textViewStyle">@style/FtcTextViewStyle</item>
@@ -1122,81 +1121,49 @@
         <attr format="reference" name="colors"/>
     </declare-styleable>
     <declare-styleable name="ColorStateListItem">
-        <!-- Base color for this state. -->
+        
         <attr name="android:color"/>
-        <!-- Alpha multiplier applied to the base color. -->
+        
         <attr format="float" name="alpha"/>
         <attr name="android:alpha"/>
     </declare-styleable>
     <declare-styleable name="FontFamily">
-        <!-- The authority of the Font Provider to be used for the request. -->
+        
         <attr format="string" name="fontProviderAuthority"/>
-        <!-- The package for the Font Provider to be used for the request. This is used to verify
-        the identity of the provider. -->
+        
         <attr format="string" name="fontProviderPackage"/>
-        <!-- The query to be sent over to the provider. Refer to your font provider's documentation
-        on the format of this string. -->
+        
         <attr format="string" name="fontProviderQuery"/>
-        <!-- The sets of hashes for the certificates the provider should be signed with. This is
-        used to verify the identity of the provider, and is only required if the provider is not
-        part of the system image. This value may point to one list or a list of lists, where each
-        individual list represents one collection of signature hashes. Refer to your font provider's
-        documentation for these values. -->
+        
         <attr format="reference" name="fontProviderCerts"/>
-        <!-- The strategy to be used when fetching font data from a font provider in XML layouts.
-        This attribute is ignored when the resource is loaded from code, as it is equivalent to the
-        choice of API between {@link
-    androidx.core.content.res.ResourcesCompat#getFont(Context, int)} (blocking) and
-        {@link
-    androidx.core.content.res.ResourcesCompat#getFont(Context, int, FontCallback, Handler)}
-        (async). -->
+        
         <attr name="fontProviderFetchStrategy">
-            <!-- The blocking font fetch works as follows.
-              First, check the local cache, then if the requested font is not cached, request the
-              font from the provider and wait until it is finished.  You can change the length of
-              the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
-              default typeface will be used instead. -->
+            
             <enum name="blocking" value="0"/>
-            <!-- The async font fetch works as follows.
-              First, check the local cache, then if the requeted font is not cached, trigger a
-              request the font and continue with layout inflation. Once the font fetch succeeds, the
-              target text view will be refreshed with the downloaded font data. The
-              fontProviderFetchTimeout will be ignored if async loading is specified. -->
+            
             <enum name="async" value="1"/>
         </attr>
-        <!-- The length of the timeout during fetching. -->
+        
         <attr format="integer" name="fontProviderFetchTimeout">
-            <!-- A special value for the timeout. In this case, the blocking font fetching will not
-              timeout and wait until a reply is received from the font provider. -->
+            
             <enum name="forever" value="-1"/>
         </attr>
     </declare-styleable>
     <declare-styleable name="FontFamilyFont">
-        <!-- The style of the given font file. This will be used when the font is being loaded into
-         the font stack and will override any style information in the font's header tables. If
-         unspecified, the value in the font's header tables will be used. -->
+        
         <attr name="fontStyle">
             <enum name="normal" value="0"/>
             <enum name="italic" value="1"/>
         </attr>
-        <!-- The reference to the font file to be used. This should be a file in the res/font folder
-         and should therefore have an R reference value. E.g. @font/myfont -->
+        
         <attr format="reference" name="font"/>
-        <!-- The weight of the given font file. This will be used when the font is being loaded into
-         the font stack and will override any weight information in the font's header tables. Must
-         be a positive number, a multiple of 100, and between 100 and 900, inclusive. The most
-         common values are 400 for regular weight and 700 for bold weight. If unspecified, the value
-         in the font's header tables will be used. -->
+        
         <attr format="integer" name="fontWeight"/>
-        <!-- The variation settings to be applied to the font. The string should be in the following
-         format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
-         used, or the font used does not support variation settings, this attribute needs not be
-         specified. -->
+        
         <attr format="string" name="fontVariationSettings"/>
-        <!-- The index of the font in the tcc font file. If the font file referenced is not in the
-        tcc format, this attribute needs not be specified. -->
+        
         <attr format="integer" name="ttcIndex"/>
-        <!-- References to the framework attrs -->
+        
         <attr name="android:fontStyle"/>
         <attr name="android:font"/>
         <attr name="android:fontWeight"/>
@@ -1204,47 +1171,42 @@
         <attr name="android:ttcIndex"/>
     </declare-styleable>
     <declare-styleable name="GradientColor">
-        <!-- Start color of the gradient. -->
+        
         <attr name="android:startColor"/>
-        <!-- Optional center color. -->
+        
         <attr name="android:centerColor"/>
-        <!-- End color of the gradient. -->
+        
         <attr name="android:endColor"/>
-        <!-- Type of gradient. The default type is linear. -->
+        
         <attr name="android:type"/>
 
-        <!-- Only applied to RadialGradient-->
-        <!-- Radius of the gradient, used only with radial gradient. -->
+        
+        
         <attr name="android:gradientRadius"/>
 
-        <!-- Only applied to SweepGradient / RadialGradient-->
-        <!-- X coordinate of the center of the gradient within the path. -->
+        
+        
         <attr name="android:centerX"/>
-        <!-- Y coordinate of the center of the gradient within the path. -->
+        
         <attr name="android:centerY"/>
 
-        <!-- LinearGradient specific -->
-        <!-- X coordinate of the start point origin of the gradient.
-             Defined in same coordinates as the path itself -->
+        
+        
         <attr name="android:startX"/>
-        <!-- Y coordinate of the start point of the gradient within the shape.
-             Defined in same coordinates as the path itself -->
+        
         <attr name="android:startY"/>
-        <!-- X coordinate of the end point origin of the gradient.
-             Defined in same coordinates as the path itself -->
+        
         <attr name="android:endX"/>
-        <!-- Y coordinate of the end point of the gradient within the shape.
-             Defined in same coordinates as the path itself -->
+        
         <attr name="android:endY"/>
 
-        <!-- Defines the tile mode of the gradient. SweepGradient doesn't support tiling. -->
+        
         <attr name="android:tileMode"/>
     </declare-styleable>
     <declare-styleable name="GradientColorItem">
-        <!-- The offset (or ratio) of this current color item inside the gradient.
-             The value is only meaningful when it is between 0 and 1. -->
+        
         <attr name="android:offset"/>
-        <!-- The current color for the offset inside the gradient. -->
+        
         <attr name="android:color"/>
     </declare-styleable>
 </resources>

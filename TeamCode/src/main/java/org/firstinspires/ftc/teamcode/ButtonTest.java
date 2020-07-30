@@ -16,6 +16,8 @@ public class ButtonTest extends LinearOpMode {
     private ElapsedTime runtime = new ElapsedTime();
     private String button = null;
 
+    private int counter;
+
     @Override
     public void runOpMode() {
         //向控制台输出数据：车辆以初始化完毕
@@ -54,6 +56,7 @@ public class ButtonTest extends LinearOpMode {
             }
             else if(gamepad1.b){
                 button = "b";
+                counter++;
             }
             else if(gamepad1.x){
                 button = "x";
@@ -65,6 +68,7 @@ public class ButtonTest extends LinearOpMode {
             telemetry.update();
 
             // Show the elapsed game time and wheel power.
+            telemetry.addData("按钮测试", counter);
             telemetry.addData("按钮测试：", button);
             telemetry.addData("状态", "运行时间: " + runtime.toString());
             telemetry.update();

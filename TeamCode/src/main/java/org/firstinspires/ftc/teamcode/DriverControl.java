@@ -11,10 +11,12 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
 @TeleOp(name="Driver control")
+@Disabled
 public class DriverControl extends LinearOpMode {
 
     //创建所有马达变量
     private ElapsedTime runtime = new ElapsedTime();
+    private ElapsedTime stopTime = new ElapsedTime();
     private DcMotor FrontLeftDrive = null;
     private DcMotor FrontRightDrive = null;
     private DcMotor BackLeftDrive = null;
@@ -30,7 +32,7 @@ public class DriverControl extends LinearOpMode {
 
     private boolean isPosition1 = false;
     private  boolean isRoot1 = false;
-    private boolean  isGrab1 = false;
+    private boolean  isPickup = false;
 
 
     //Test unit variable
@@ -38,6 +40,9 @@ public class DriverControl extends LinearOpMode {
     private Servo backRoot  = null;
 
     private CRServo lCraneServo = null;
+
+    private Servo rotateServo = null;
+    private Servo pickServo = null;
 
     @Override
     public void runOpMode() {
@@ -63,11 +68,20 @@ public class DriverControl extends LinearOpMode {
         //Linear crane test variable
         lCraneServo = hardwareMap.get(CRServo.class, "linearCraneServo");
 
+        //Rotation servo test variable
+        rotateServo = hardwareMap.get(Servo.class, "craneRotateServo");
+
+        //Pick servo test variable
+        pickServo = hardwareMap.get(Servo.class, "cranePickServo");
+
+
         //设定电机由编码器管理
+        /*
         FrontLeftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         FrontRightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         BackLeftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         BackRightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+         */
 
         leftIntake.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightIntake.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
@@ -80,6 +94,7 @@ public class DriverControl extends LinearOpMode {
         rightRise.setDirection(DcMotor.Direction.REVERSE);
 
         backRoot.setDirection(Servo.Direction.REVERSE);
+        pickServo.setDirection(Servo.Direction.REVERSE);
 
         leftIntake.setPower(0);
         rightIntake.setPower(0);
@@ -92,6 +107,9 @@ public class DriverControl extends LinearOpMode {
         //Set test variable position.
         frontRoot.setPosition(0);
         backRoot.setPosition(0);
+
+        rotateServo.setPosition(0);
+        pickServo.setPosition(0);
 
         //向控制台输出数据：车辆以初始化完毕
         telemetry.addData("Status", "Initialized");
@@ -107,15 +125,30 @@ public class DriverControl extends LinearOpMode {
             intake();
             rise();
             activateStake();
-            //activateRoot();
+            activateRoot();
 
-            operateLCraneServo();
+            //operateLCraneServo();
+            operatePickServo();
 
             telemetry.addData("Status", "Operation time: " + runtime.toString());
             telemetry.update();
         }
     }
 
+    public void operatePickServo(){
+        if(gamepad1.b){
+            if(isPickup){
+                pickServo.setPosition(0.1);
+                isPickup = false;
+            }
+            else{
+                pickServo.setPosition(0);
+                isPickup = true;
+            }
+        }
+    }
+
+    /*
     public void operateLCraneServo(){
         if(gamepad1.dpad_right){
             lCraneServo.setPower(-0.8);
@@ -131,6 +164,7 @@ public class DriverControl extends LinearOpMode {
             lCraneServo.setPower(0);
         }
     }
+     */
 
     //Grab test unit function
 
@@ -182,7 +216,7 @@ public class DriverControl extends LinearOpMode {
     }
 
     public void intake(){
-        if(gamepad1.left_bumper == true){
+        if(gamepad1.left_bumper){
             leftIntake.setPower(-1);
             rightIntake.setPower(-1);
         }
@@ -191,13 +225,16 @@ public class DriverControl extends LinearOpMode {
             leftIntake.setPower(1);
             rightIntake.setPower(1);
         }
+
+        leftIntake.setPower(0);
+        rightIntake.setPower(0);
     }
 
 
     public void calculateDrivePower(){
-        float y_raw = gamepad1.left_stick_y * 0.95f;
-        float x_raw = gamepad1.left_stick_x * 0.95f;
-        float z_raw = gamepad1.right_stick_x * 0.95f;
+        float y_raw = gamepad1.left_stick_y * 0.8f;
+        float x_raw = gamepad1.left_stick_x * 0.8f;
+        float z_raw = gamepad1.right_stick_x * 0.8f;
         float xscale = (float) 0.75;
         float yscale = (float) 0.75;
         float zscale = (float) 0.65;
